@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Source Documents — Yasin Ali Muhammad</title>
+  <meta name="description" content="Primary source documents underlying published reporting and writing by Yasin Ali Muhammad." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #f0ede8;
+      --grey: #777;
+      --border: #1f1f1f;
+      --card: #111;
+      --display: 'Bebas Neue', sans-serif;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 3rem;
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--display);
+      font-size: 1.05rem; letter-spacing: 0.08em;
+      color: var(--white); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-size: 0.7rem; font-weight: 400;
+      text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--grey); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+
+    /* ── HEADER ── */
+    .page-header {
+      padding: 9rem 3rem 3rem;
+      border-bottom: 1px solid var(--border);
+      animation: fadeUp 0.8s ease forwards;
+    }
+    .page-title {
+      font-family: var(--display);
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+    .page-intro {
+      font-size: 0.9rem; color: #888;
+      line-height: 1.85; font-weight: 300;
+      max-width: 640px;
+    }
+
+    /* ── DOCUMENT LIST ── */
+    .section { padding: 4rem 3rem; }
+
+    .doc-item {
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 0 2.5rem;
+      padding: 2.2rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+    .doc-item:first-child { border-top: 1px solid var(--border); }
+
+    .doc-meta-col {
+      display: flex; flex-direction: column; gap: 0.4rem;
+      padding-top: 5px;
+    }
+    .doc-date {
+      font-size: 0.72rem; color: var(--grey);
+      font-weight: 400; letter-spacing: 0.02em;
+    }
+    .doc-agency {
+      font-size: 0.62rem; text-transform: uppercase;
+      letter-spacing: 0.1em; color: #444;
+    }
+
+    .doc-title {
+      font-family: var(--serif);
+      font-size: 1.15rem; color: var(--white);
+      line-height: 1.35; margin-bottom: 0.6rem;
+    }
+    .doc-desc {
+      font-size: 0.85rem; color: #777;
+      line-height: 1.75; font-weight: 300;
+      max-width: 640px; margin-bottom: 0.9rem;
+    }
+    .doc-actions {
+      display: flex; align-items: center;
+      gap: 1.4rem; flex-wrap: wrap;
+    }
+    .doc-link {
+      font-size: 0.72rem; color: var(--white);
+      text-decoration: none; letter-spacing: 0.06em;
+      border-bottom: 1px solid #333;
+      padding-bottom: 2px;
+      transition: border-color 0.2s;
+    }
+    .doc-link:hover { border-color: var(--white); }
+    .doc-detail {
+      font-size: 0.68rem; color: #444;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── NOTE ── */
+    .page-note {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.78rem; color: #555;
+      line-height: 1.8; font-weight: 300;
+      max-width: 640px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2rem 3rem;
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid var(--border);
+    }
+    .footer-name {
+      font-family: var(--display);
+      font-size: 0.9rem; letter-spacing: 0.1em; color: #333;
+    }
+    .footer-copy { font-size: 0.7rem; color: #333; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 0 1rem; }
+      .nav-logo { display: none; }
+      .nav-links { gap: 1rem; }
+      .nav-links a { font-size: 0.65rem; }
+      .page-header { padding: 7rem 1.5rem 2.5rem; }
+      .section { padding: 3rem 1.5rem; }
+      .doc-item { grid-template-columns: 1fr; gap: 0.8rem; }
+      .doc-meta-col { flex-direction: row; gap: 1rem; align-items: baseline; padding-top: 0; }
+      footer { flex-direction: column; gap: 0.4rem; text-align: center; padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">Yasin Ali Muhammad</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#publications">Publications</a></li>
+    <li><a href="index.html#blog">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HEADER -->
+<header class="page-header">
+  <h1 class="page-title">Source<br>Documents</h1>
+  <p class="page-intro">Primary documents underlying my reporting and writing. Where a piece rests on a record I obtained directly, the record is posted here in full so readers can check the claim against the source.</p>
+</header>
+
+<!-- DOCUMENTS -->
+<section class="section">
+
+  <div class="doc-item">
+    <div class="doc-meta-col">
+      <span class="doc-date">Feb 2026</span>
+      <span class="doc-agency">FDA</span>
+    </div>
+    <div>
+      <div class="doc-title">Form FDA 483, Inspectional Observations — Auriga Research Private Limited</div>
+      <p class="doc-desc">Inspection of a contract testing laboratory in Bengaluru, India, conducted February 4–6, 2026. Investigators recorded three observations covering microbiological data integrity, out-of-specification investigations and CAPA adequacy, and quality control unit procedures. Obtained through a Freedom of Information Act request.</p>
+      <div class="doc-actions">
+        <a class="doc-link" href="fda-483-auriga-research-feb-2026.pdf" target="_blank" rel="noopener">View PDF →</a>
+        <span class="doc-detail">10 pages · FOIA 2026-3291-CDER-1 · FEI 3019975128</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="page-note">A Form 483 lists observations made by FDA investigators during an inspection. It is not a final agency determination regarding compliance, and a firm may respond to, contest, or have already addressed any observation it contains. Redactions in these documents were applied by the agency prior to release.</p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-name">Yasin Ali Muhammad</span>
+  <span class="footer-copy">© 2026 · Atlanta, GA</span>
+</footer>
+
+</body>
+</html>
